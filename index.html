@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DRHS Writing Center</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">
+        <img src="WC_logo.png" alt="DRHS Writing Center Logo">
+      </div>
+      <div>
+        <h1>DRHS Writing Center</h1>
+      </div>
+    </div>
+
+    <nav class="tabs" aria-label="Writing Center Tabs">
+      <button class="tab-btn active" data-tab="signup" aria-selected="true" type="button">
+        Student Sign-Up
+      </button>
+      <button class="tab-btn" data-tab="consultant" aria-selected="false" type="button">
+        Consultant Form
+      </button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Student sign up -->
+    <section id="tab-signup" class="tab-panel active" role="tabpanel">
+      <div class="panel-head">
+        <h2>Student Sign-Up Form</h2>
+      </div>
+
+      <form class="card">
+        <div class="grid-2">
+          <label class="field">
+            <span>Writer's First Name</span>
+            <input type="text" name="writerFirst" required />
+          </label>
+
+          <label class="field">
+            <span>Writer's Last Name</span>
+            <input type="text" name="writerLast" required />
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label class="field">
+            <span>Appointment Date</span>
+            <input type="date" name="appointmentDate" required />
+          </label>
+
+          <label class="field">
+            <span>Teacher Name</span>
+            <select name="teacherName" required>
+              <option value="" selected disabled>Choose</option>
+              <option>Mrs. Cho</option>
+              <option>Mrs. Tambellini</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" type="submit" >
+            Submit
+          </button>
+          <button class="btn ghost" type="reset">
+            Reset
+          </button>
+        </div>
+
+      </form>
+    </section>
+
+    <!-- Consultant form -->
+    <section id="tab-consultant" class="tab-panel" role="tabpanel">
+      <div class="panel-head">
+        <h2>Consultant Form</h2>
+      </div>
+
+      <form class="card">
+        <label class="field">
+          <span>Sign-Up Appointment (Date)</span>
+          <select name="signupDate" required>
+            <option selected disabled>Choose a sign-up date</option>
+            <option>1</option>
+          </select>
+        </label>
+
+        <div class="grid-2">
+          <label class="field">
+            <span>Consultant's Name (First and Last)</span>
+            <input type="text" name="consultantName" required />
+          </label>
+
+          <label class="field">
+            <span>Writer's Name (First and Last)</span>
+            <input type="text" name="writerName" required />
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label class="field">
+            <span>Date of Appointment</span>
+            <input type="date" name="dateOfAppointment" required />
+          </label>
+
+          <label class="field">
+            <span>Writer's Grade Level</span>
+            <select name="gradeLevel" required>
+              <option value="" selected disabled>Choose</option>
+              <option>9th Grade</option>
+              <option>10th Grade</option>
+              <option>11th Grade</option>
+              <option>12th Grade</option>
+              <option>4th Grade</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>Teacher who gave the writing assignment</span>
+          <select name="teacherAssigned" required>
+            <option value="" selected disabled>Choose</option>
+            <option>Mrs. Tambellini</option>
+            <option>Mrs. Cho</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Course (Subject + Level)</span>
+          <input type="text" name="courseLevel" placeholder="Ex. English 12 AP" required />
+        </label>
+        
+
+        <label class="field">
+          <span>Type of Assignment</span>
+          <select name="assignmentType" required>
+            <option value="" selected disabled>Choose</option>
+            <option>Analytical Essay</option>
+            <option>Argumentative/Persuasive Essay</option>
+            <option>Narrative/College Essay</option>
+            <option>CIT Paper/Proposal</option>
+            <option>Science Report</option>
+            <option>History Paper</option>
+            <option>Creative Writing</option>
+            <option>Research Paper</option>
+            <option>Presentation</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>DUE DATE for this writing assignment</span>
+          <input type="date" name="dueDate" required />
+        </label>
+
+        <div class="grid-2">
+          <label class="field">
+            <span>Writer confidence BEFORE</span>
+            <select name="beforeConfidence" required>
+              <option value="" selected disabled>Choose</option>
+              <option>Unsure</option>
+              <option>Somewhat Confident</option>
+              <option>Confident</option>
+              <option>Very Confident</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Writer confidence AFTER</span>
+            <select name="afterConfidence" required>
+              <option value="" selected disabled>Choose</option>
+              <option>Unsure</option>
+              <option>Somewhat Confident</option>
+              <option>Confident</option>
+              <option>Very Confident</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span>What aspects of writing did you work on today?</span>
+          <textarea name="workedOn" rows="4" required></textarea>
+        </label>
+
+        <label class="field">
+          <span>Next steps for the writer</span>
+          <textarea name="nextSteps" rows="4" required></textarea>
+        </label>
+
+        <div class="actions">
+          <button class="btn primary" type="submit">
+            Submit
+          </button>
+          <button class="btn ghost" type="reset">
+            Reset
+          </button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
